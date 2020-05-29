@@ -8,9 +8,22 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-function intReversal(int){
-    let numb = int.toString().split('').reverse().join('')
-    return parseInt(numb) * Math.sign(int)
+//SOLUTION 1
+function intReversal(n) {
+    let int = n.toString().split('').reverse().join('')
+
+   return parseInt(int) * Math.sign(n)
 }
 
-console.log(intReversal(58))
+//SOLUTION 2
+function intReversal(n) {
+    let int = n.toString().split('').reverse().join('')
+
+    if(n < 0){
+        return parseInt(int) * -1
+    } else {
+        return parseInt(int)
+    }
+}
+
+console.log(intReversal(-58))
